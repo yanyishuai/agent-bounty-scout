@@ -39,10 +39,12 @@ Expected log sequence:
 ### Explorer proof (fill after local run)
 
 ```
-RELEASED tx: <paste devnet explorer URL>
-Program: escrow (devnet ID from examples/txodds/escrow)
-Amount: ~0.0004–0.001 SOL
+RELEASED tx: <paste devnet explorer URL — run npm run demo:bounty-smoke after funding buyer>
+Program: escrow (devnet ID R5NWNg9eRLWWQU81Xbzz5Du1k7jTDeeT92Ty6qCeXet)
+Amount: ~0.0004 SOL
 ```
+
+**Captured proof (live scan + protocol thread):** [docs/DEMO-PROOF.md](./DEMO-PROOF.md) · [docs/DEMO-PROOF.json](./DEMO-PROOF.json)
 
 ## Single-agent smoke (no Docker)
 
