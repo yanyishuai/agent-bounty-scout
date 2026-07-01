@@ -53,6 +53,22 @@ cd coral-agents/seller-agent
 GITHUB_TOKEN=ghp_... npx tsx -e "import { deliverBountyScan } from './src/bounty.ts'; deliverBountyScan('scan min 5 max 100 limit 5').then(console.log)"
 ```
 
+## Full protocol + devnet escrow (no Docker)
+
+Runs WANT→BID→AWARD→DEPOSITED→DELIVERED→RELEASED with a **real devnet RELEASE tx**:
+
+```bash
+node scripts/setup.js
+# add GITHUB_TOKEN to .env, fund buyer at https://faucet.solana.com
+cd examples/txodds && npm install && npm run demo:bounty-smoke
+```
+
+Output: `docs/DEMO-PROOF.json` with `release_explorer` URL. Or from repo root:
+
+```bash
+python scripts/run_imperial_demo.py
+```
+
 ## What judges should see in delivery JSON
 
 ```json

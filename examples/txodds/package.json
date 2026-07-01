@@ -12,7 +12,8 @@
     "proxy": "tsx server/proxy.ts",
     "web": "npx --yes serve web -l 3020",
     "coral": "tsx coral/round.ts",
-    "coral:bounty": "tsx coral/bounty-round.ts"
+    "coral:bounty": "tsx coral/bounty-round.ts",
+    "demo:bounty-smoke": "tsx scripts/bounty-devnet-smoke.ts"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.32.1",
