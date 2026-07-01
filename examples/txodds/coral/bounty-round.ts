@@ -64,16 +64,17 @@ async function main(): Promise<void> {
   const scout = agent(
     'seller-scout',
     sellerOpts('seller-scout', env.SCOUT_FLOOR_SOL ?? '0.0004', 'a GitHub bounty scout with tight floors and fresh scans'),
+    'seller-agent',
   )
   const fast = agent(
     'seller-fast',
     sellerOpts('seller-fast', env.FAST_SELLER_FLOOR_SOL ?? '0.0006', 'a fast generalist bounty scanner with broader filters'),
-    'seller-scout',
+    'seller-agent',
   )
   const premium = agent(
     'seller-premium',
     sellerOpts('seller-premium', env.PREMIUM_SELLER_FLOOR_SOL ?? '0.00085', 'a premium analyst that adds commentary on top of scans'),
-    'seller-scout',
+    'seller-agent',
   )
   const buyer = agent('buyer-agent', {
     BUYER_KEYPAIR_B58: str(keypair),

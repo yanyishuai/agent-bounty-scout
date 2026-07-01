@@ -36,6 +36,7 @@ services:
       - TXLINE_BASE_URL=${TXLINE_BASE_URL:-}
       # Set TRACE=1 to log coral_* calls + on-chain Explorer links in the agents.
       - TRACE=${TRACE:-}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./examples/txodds/coral/coral.toml:/config/coral.toml:ro
