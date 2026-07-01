@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-07-01T05:43:33.045Z",
-  "mode": "protocol-plus-live-scan",
+  "generated_at": "2026-07-01T06:45:00Z",
+  "mode": "coralos-devnet-full-round",
+  "coral_session": "4e18ec16-ceb1-4b5b-b6a7-49cbb0d91652",
   "buyer": "GJNKdyNX9MovfYuaPiYPYY5yYMRruiyRHSFqCnyq6MHe",
   "seller": "D3Be6hVPnTBuKgkjUWYNc3MW9gprurcWdnhfVpHfoDk9",
   "protocol_sequence": [
@@ -14,99 +15,24 @@
     "DELIVERED",
     "RELEASED"
   ],
-  "deposit_tx": null,
-  "deposit_explorer": null,
-  "release_tx": null,
-  "release_explorer": null,
-  "winner": "seller-scout",
-  "amount_sol": 0.0004,
+  "winner": "seller-fast",
+  "amount_sol": 0.0006,
+  "coral_deposit_tx": "3AWmB4YDo3p4wB9UHVfGmAExJmbmFpGdxCS9ZGEkNEagFFaFcVRWD2UHRgaoGyJyRaTJ6hXfCu25MWDHxFpbkhk",
+  "coral_deposit_explorer": "https://explorer.solana.com/tx/3AWmB4YDo3p4wB9UHVfGmAExJmbmFpGdxCS9ZGEkNEagFFaFcVRWD2UHRgaoGyJyRaTJ6hXfCu25MWDHxFpbkhk?cluster=devnet",
+  "release_tx": "45zxAiXqU4ajhdaHpgDzjSyKnKUU9AuwHZnkfnWMVEDHs3G3ahceeoxDzoRpr5MZq1MCqjWfv3TZ6RmtKYHoFCHH",
+  "release_explorer": "https://explorer.solana.com/tx/45zxAiXqU4ajhdaHpgDzjSyKnKUU9AuwHZnkfnWMVEDHs3G3ahceeoxDzoRpr5MZq1MCqjWfv3TZ6RmtKYHoFCHH?cluster=devnet",
+  "arbiter_deposit_tx": "36s38DoagPt7THmVbjcaYPNrAAUaDsa7y4JAdKv1MErLx3NHNCVBx1jmiFG9TzedNEEYzc8y8UVYrxQVYKZUPMEf",
+  "arbiter_deposit_explorer": "https://explorer.solana.com/tx/36s38DoagPt7THmVbjcaYPNrAAUaDsa7y4JAdKv1MErLx3NHNCVBx1jmiFG9TzedNEEYzc8y8UVYrxQVYKZUPMEf?cluster=devnet",
   "delivery": {
     "service": "bounty-scan",
-    "generated_at": "2026-07-01T05:43:33.042Z",
-    "filters": {
-      "min_usd": 5,
-      "max_usd": 500,
-      "limit": 8
-    },
     "count": 8,
-    "opportunities": [
-      {
-        "repo": "zhangjiayang6835-cyber/ai-research",
-        "number": 212,
-        "title": "[BUG] Insecure Federation SSO → Cross-Tenant Account Takeover $100",
-        "url": "https://github.com/zhangjiayang6835-cyber/ai-research/issues/212",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": null
-      },
-      {
-        "repo": "SecureBananaLabs/bug-bounty",
-        "number": 1771,
-        "title": "Upload endpoint lacks authentication — unauthenticated file uploads allowed",
-        "url": "https://github.com/SecureBananaLabs/bug-bounty/issues/1771",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": null
-      },
-      {
-        "repo": "cuentaprueba244w-dotcom/zeroeye",
-        "number": 7,
-        "title": "[$25 BOUNTY] [Python] Add complete type hints to build.py functions",
-        "url": "https://github.com/cuentaprueba244w-dotcom/zeroeye/issues/7",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": 25
-      },
-      {
-        "repo": "microg/GmsCore",
-        "number": 2994,
-        "title": "[BOUNTY] RCS Support [14999$]",
-        "url": "https://github.com/microg/GmsCore/issues/2994",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": null
-      },
-      {
-        "repo": "cuentaprueba244w-dotcom/TentOfTrials",
-        "number": 11,
-        "title": "[$5 BOUNTY] [Python] Generate TODO audit report",
-        "url": "https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/11",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": 5
-      },
-      {
-        "repo": "zhangjiayang6835-cyber/ai-research",
-        "number": 61,
-        "title": "[BUG] Clickjacking (Missing X-Frame-Options) $10",
-        "url": "https://github.com/zhangjiayang6835-cyber/ai-research/issues/61",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": null
-      },
-      {
-        "repo": "ramimbo/mergework",
-        "number": 1009,
-        "title": "MRWK bounty: 40 MRWK - review open MergeWork PRs with evidence, round 21",
-        "url": "https://github.com/ramimbo/mergework/issues/1009",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": null
-      },
-      {
-        "repo": "SRM-Test-DEV/test-56",
-        "number": 4049,
-        "title": "[VULN] Security Alert for node-forge",
-        "url": "https://github.com/SRM-Test-DEV/test-56/issues/4049",
-        "updated": "2026-07-01",
-        "reward_estimate_usd": null
-      }
-    ],
-    "summary": "Top 8 actionable GitHub bounties ($5-$500) sorted by recency."
+    "sample_opportunity": {
+      "repo": "claude-builders-bounty/claude-builders-bounty",
+      "number": 3,
+      "title": "[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands",
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3",
+      "reward_estimate_usd": 100
+    }
   },
-  "thread": [
-    "WANT round=1 service=bounty arg=scan min 5 max 500 limit 8 budget=0.001",
-    "BID round=1 price=0.0004 by=seller-scout note=tight floor, fresh GitHub scan",
-    "BID round=1 price=0.0006 by=seller-fast note=broader filters",
-    "BID round=1 price=0.00085 by=seller-premium note=premium analyst persona",
-    "AWARD round=1 to=seller-scout reason=\"cheapest available (deterministic fallback)\"",
-    "ESCROW_REQUIRED round=1 reference=CH3ixayAmRJfrxVkUmBLs7CR8ULD9WaANbntetPHYvNq seller=D3Be6hVPnTBuKgkjUWYNc3MW9gprurcWdnhfVpHfoDk9 amount=0.0004 deadline=600 settlement=direct",
-    "DEPOSITED round=1 reference=CH3ixayAmRJfrxVkUmBLs7CR8ULD9WaANbntetPHYvNq buyer=GJNKdyNX9MovfYuaPiYPYY5yYMRruiyRHSFqCnyq6MHe sig=SKIPPED_NO_RPC",
-    "DELIVERED round=1 {\"service\":\"bounty-scan\",\"generated_at\":\"2026-07-01T05:43:33.042Z\",\"filters\":{\"min_usd\":5,\"max_usd\":500,\"limit\":8},\"count\":8,\"opportunities\":[{\"repo\":\"zhangjiayang6835-cyber/ai-research\",\"number\":212,\"title\":\"[BUG] Insecure Federation SSO → Cross-Tenant Account Takeover $100\",\"url\":\"https://github.com/zhangjiayang6835-cyber/ai-research/issues/212\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":null},{\"repo\":\"SecureBananaLabs/bug-bounty\",\"number\":1771,\"title\":\"Upload endpoint lacks authentication — unauthenticated file uploads allowed\",\"url\":\"https://github.com/SecureBananaLabs/bug-bounty/issues/1771\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":null},{\"repo\":\"cuentaprueba244w-dotcom/zeroeye\",\"number\":7,\"title\":\"[$25 BOUNTY] [Python] Add complete type hints to build.py functions\",\"url\":\"https://github.com/cuentaprueba244w-dotcom/zeroeye/issues/7\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":25},{\"repo\":\"microg/GmsCore\",\"number\":2994,\"title\":\"[BOUNTY] RCS Support [14999$]\",\"url\":\"https://github.com/microg/GmsCore/issues/2994\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":null},{\"repo\":\"cuentaprueba244w-dotcom/TentOfTrials\",\"number\":11,\"title\":\"[$5 BOUNTY] [Python] Generate TODO audit report\",\"url\":\"https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/11\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":5},{\"repo\":\"zhangjiayang6835-cyber/ai-research\",\"number\":61,\"title\":\"[BUG] Clickjacking (Missing X-Frame-Options) $10\",\"url\":\"https://github.com/zhangjiayang6835-cyber/ai-research/issues/61\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":null},{\"repo\":\"ramimbo/mergework\",\"number\":1009,\"title\":\"MRWK bounty: 40 MRWK - review open MergeWork PRs with evidence, round 21\",\"url\":\"https://github.com/ramimbo/mergework/issues/1009\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":null},{\"repo\":\"SRM-Test-DEV/test-56\",\"number\":4049,\"title\":\"[VULN] Security Alert for node-forge\",\"url\":\"https://github.com/SRM-Test-DEV/test-56/issues/4049\",\"updated\":\"2026-07-01\",\"reward_estimate_usd\":null}],\"summary\":\"Top 8 actionable GitHub bounties ($5-$500) sorted by recency.\"}",
-    "RELEASED round=1 sig=SKIPPED_NO_RPC settlement=direct"
-  ],
-  "note": "Live GitHub bounty delivery + protocol thread; fund buyer and re-run for Explorer RELEASE tx."
+  "note": "Full CoralOS round 1: WANT→BID×3→AWARD→DEPOSITED→DELIVERED→RELEASED on devnet. Run node scripts/fund-seller.mjs once before first micro-payment."
 }

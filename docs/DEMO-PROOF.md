@@ -1,36 +1,43 @@
 # Demo Proof — Agent Bounty Scout
 
-**Generated:** 2026-07-01 · **Mode:** `protocol-plus-live-scan`
+**Generated:** 2026-07-01 · **Mode:** `coralos-devnet-full-round`
 
-## Protocol sequence (CoralOS wire format)
+## Protocol (CoralOS wire format)
 
 ```
 WANT → BID ×3 → AWARD → ESCROW_REQUIRED → DEPOSITED → DELIVERED → RELEASED
 ```
 
-- **Winner:** `seller-scout` @ 0.0004 SOL (deterministic cheapest-bid fallback)
-- **Buyer wallet:** `GJNKdyNX9MovfYuaPiYPYY5yYMRruiyRHSFqCnyq6MHe`
-- **Seller wallet:** `D3Be6hVPnTBuKgkjUWYNc3MW9gprurcWdnhfVpHfoDk9`
+| Field | Value |
+|-------|-------|
+| Coral session | `4e18ec16-ceb1-4b5b-b6a7-49cbb0d91652` |
+| Buyer | `GJNKdyNX9MovfYuaPiYPYY5yYMRruiyRHSFqCnyq6MHe` |
+| Seller | `D3Be6hVPnTBuKgkjUWYNc3MW9gprurcWdnhfVpHfoDk9` |
+| Winner | `seller-fast` @ 0.0006 SOL |
+| Settlement | direct escrow (devnet) |
 
-> Devnet Explorer links: fund the buyer at [faucet.solana.com](https://faucet.solana.com) and re-run `npm run demo:bounty-smoke` from `examples/txodds` to capture `release_explorer` (local RPC was unreachable during CI capture).
+## Explorer links (devnet)
 
-## Live delivery sample (8 opportunities)
+| Step | Transaction |
+|------|-------------|
+| **DEPOSITED** (CoralOS round 1) | [3AWmB4YD…xFpbkhk](https://explorer.solana.com/tx/3AWmB4YDo3p4wB9UHVfGmAExJmbmFpGdxCS9ZGEkNEagFFaFcVRWD2UHRgaoGyJyRaTJ6hXfCu25MWDHxFpbkhk?cluster=devnet) |
+| **RELEASED** (CoralOS round 1) | [45zxAiXq…HoFCHH](https://explorer.solana.com/tx/45zxAiXqU4ajhdaHpgDzjSyKnKUU9AuwHZnkfnWMVEDHs3G3ahceeoxDzoRpr5MZq1MCqjWfv3TZ6RmtKYHoFCHH?cluster=devnet) |
 
-| Repo | Issue | Reward (est.) |
-|------|-------|---------------|
-| cuentaprueba244w-dotcom/zeroeye | [#7](https://github.com/cuentaprueba244w-dotcom/zeroeye/issues/7) | $25 |
-| cuentaprueba244w-dotcom/TentOfTrials | [#11](https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/11) | $5 |
-| cuentaprueba244w-dotcom/TentOfTrials | [#3](https://github.com/cuentaprueba244w-dotcom/TentOfTrials/issues/3) | $35 |
-| cuentaprueba244w-dotcom/zeroeye | [#4](https://github.com/cuentaprueba244w-dotcom/zeroeye/issues/4) | $10 |
+## Live delivery sample
 
-Full machine-readable capture: [DEMO-PROOF.json](./DEMO-PROOF.json)
+Seller `deliverBountyScan()` returned 8 GitHub opportunities including:
+
+- [claude-builders-bounty #3](https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3) — $100
+- [xevrion-v2/agent-playground #3377](https://github.com/xevrion-v2/agent-playground/issues/3377) — $50
+
+Full JSON: [DEMO-PROOF.json](./DEMO-PROOF.json)
 
 ## Reproduce
 
 ```bash
-node scripts/setup.js
-# GITHUB_TOKEN=... in .env
-cd examples/txodds && npm install && npm run demo:bounty-smoke
+docker compose up -d coral
+docker build -f coral-agents/buyer-agent/Dockerfile -t buyer-agent:0.1.0 .
+docker build -f coral-agents/seller-agent/Dockerfile -t seller-agent:0.1.0 .
+node scripts/fund-seller.mjs   # seller needs rent-exempt balance for micro-payments
+cd examples/txodds && npm run coral:bounty
 ```
-
-Or: `python scripts/run_imperial_demo.py` from the earn workspace.

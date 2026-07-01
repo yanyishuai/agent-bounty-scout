@@ -56,7 +56,7 @@ async function main(): Promise<void> {
     FLOOR_SOL: f64(Number(floor)),
     PERSONA: str(persona),
     SERVICE: str('bounty'),
-    SETTLEMENT_MODE: str('arbiter'),
+    SETTLEMENT_MODE: str('direct'),
     ...(env.GITHUB_TOKEN ? { GITHUB_TOKEN: str(env.GITHUB_TOKEN) } : {}),
     ...llm,
   })
@@ -81,7 +81,7 @@ async function main(): Promise<void> {
     AGENT_NAME: str('buyer-agent'),
     SOLANA_RPC_URL: str(rpc),
     ARBITER_KEYPAIR_B58: str(arbiter),
-    SETTLEMENT_MODE: str('arbiter'),
+    SETTLEMENT_MODE: str('direct'),
     SELLER_WALLET: str(wallet),
     BUYER_MAX_SOL: f64(Number(env.BUYER_MAX_SOL ?? '0.001')),
     BUYER_SERVICE: str('bounty'),
